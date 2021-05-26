@@ -17,7 +17,7 @@
                 <br><br>
                 <hr>
                 <div class="col-12">
-                    <form action="/department/create/save" method="post" class="row g-3">
+                    <form action="/leaves/create/save" method="post" class="row g-3">
                                 @csrf
                         <div class="col-md-4">
                             <label for="inputPassword4" class="form-label">Employee ID</label>
