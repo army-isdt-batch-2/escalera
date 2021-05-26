@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Paylsip;
+use App\Models\Payslip;
 use Redirect;
 
 class PayslipController extends Controller
@@ -15,11 +15,12 @@ class PayslipController extends Controller
         $this->request =$request;
 
     }
-    
+
     public function payslip()
     {
         return view('payslip');
     }
+    
     public function save()
     {
         // save to database

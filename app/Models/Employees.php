@@ -33,3 +33,7 @@ class Employees extends Model
             'deleted_at'
     ];
 }
+
+
+
+

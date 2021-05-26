@@ -20,4 +20,4 @@ class Payslip extends Model
             'deleted_at'
     ];
 }
-}
+
