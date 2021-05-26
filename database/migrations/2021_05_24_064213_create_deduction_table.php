@@ -22,6 +22,7 @@ class CreateDeductionTable extends Migration
             $table->integer('monthly_contribution')->index();
             $table->integer('employee_share')->index();
             $table->integer('employer_share')->index();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

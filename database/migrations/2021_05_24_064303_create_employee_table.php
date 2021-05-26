@@ -32,6 +32,7 @@ class CreateEmployeeTable extends Migration
             $table->unsignedBigInteger('philhealth')->index();
             $table->unsignedBigInteger('pagibig')->index();
             $table->unsignedBigInteger('tax')->index();
+            $table->softDeletes();
            // $table->integer('employee_id')->index();
             $table->timestamps();
 

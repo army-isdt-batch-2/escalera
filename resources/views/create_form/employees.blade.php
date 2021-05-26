@@ -17,37 +17,38 @@
                 <br><br>
                 <hr>
                 <div class="col-12">
-                    <form class="row g-3">
+                    <form action="/department/create/save" method="post" class="row g-3">
+                                @csrf
                         <div class="col-md-4">
                             <label for="inputEmail4" class="form-label">Photo</label>
-                            <input type="file" class="form-control" id="inputEmail4">
+                            <input type="file" class="form-control" name="photo" required>
                         </div>
                         <div class="col-md-8"></div>
                         <div class="col-md-4">
                             <label for="inputPassword4" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="inputPassword4">
+                            <input type="text" class="form-control" name="first_name" required>
                         </div>
                         <div class="col-md-4">
                             <label for="inputPassword4" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="inputPassword4">
+                            <input type="text" class="form-control" name="last_name" required>
                         </div>
                         <div class="col-md-4">
                             <label for="inputPassword4" class="form-label">Middle Name</label>
-                            <input type="text" class="form-control" id="inputPassword4">
+                            <input type="text" class="form-control" name="middle_name" required>
                         </div>
                         <div class="col-md-4">
                             <div class="col-md-12">
                                 <label for="inputPassword4" class="form-label">Contact</label>
-                                <input type="telephone" class="form-control" id="inputPassword4">
+                                <input type="telephone" class="form-control" name="contact_number" required>
                             </div>
 
                                 <div class="col-md-12">
                                 <label for="inputPassword4" class="form-label">Birthday</label>
-                                <input type="date" class="form-control" id="inputPassword4">
+                                <input type="date" class="form-control" name="birthday" required>
                             </div>
                             <div class="col-md-12">
                                 <label for="inputState" class="form-label">Gender</label>
-                                <select id="inputState" class="form-select">
+                                <select class="form-control" name="gender" required>
                                     <option selected>Choose...</option>
                                     <option>Male</option>
                                     <option>Female</option>
@@ -59,14 +60,14 @@
                             <div class="col-md-12">
                                 <label for="inputPassword4" class="form-label">Address</label>
                                 
-                                <textarea rows="7" class="form-control"></textarea>
+                                <textarea rows="7" class="form-control" name="address"></textarea>
 
                             </div>
 
                         </div>
                         <div class="col-md-4">
                             <label for="inputState" class="form-label">Department</label>
-                            <select id="inputState" class="form-select">
+                            <select id="inputState" class="form-select" name="deparment_id" required>
                                 <option selected>Choose...</option>
                                 <option>Depart 1</option>
                                 <option>Depart 2</option>
@@ -75,15 +76,15 @@
                         </div>
                         <div class="col-md-4">
                             <label for="inputPassword4" class="form-label">Designation</label>
-                            <input type="text" class="form-control" id="inputPassword4">
+                            <input type="text" class="form-control" name="designation" required>
                         </div>
                         <div class="col-md-4">
                             <label for="inputPassword4" class="form-label">Basic Rate Per Day</label>
-                            <input type="number" class="form-control" id="inputPassword4">
+                            <input type="number" class="form-control" name="basic_rate_perday" required>
                         </div>
                         <div class="col-md-6">
                             <label for="inputState" class="form-label">PhilHealth Contribution Table</label>
-                            <select id="inputState" class="form-select">
+                            <select id="inputState" class="form-select" name="philhealth" required>
                                 <option selected>Choose...</option>
                                 <option>1. P 10,000 - Below - (P 275.00 monthly)</option>
                                 <option>2. P 10,000 - Above - (P 575.00 monthly)</option>
@@ -92,7 +93,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="inputState" class="form-label">SSS Contribution Table</label>
-                            <select id="inputState" class="form-select">
+                            <select id="inputState" class="form-select" name="sss" required>
                                 <option selected>Choose...</option>
                                 <option>Depart 1</option>
                                 <option>Depart 2</option>
@@ -103,7 +104,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="inputState" class="form-label">PAGIBIG Contribution Table</label>
-                            <select id="inputState" class="form-select">
+                            <select id="inputState" class="form-select" name="pagibig" required>
                                 <option selected>Choose...</option>
                                 <option>Depart 1</option>
                                 <option>Depart 2</option>
@@ -114,7 +115,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="inputState" class="form-label">Income Tax Table</label>
-                            <select id="inputState" class="form-select">
+                            <select id="inputState" class="form-select" name="tax" required>
                                 <option selected>Choose...</option>
                                 <option>Depart 1</option>
                                 <option>Depart 2</option>

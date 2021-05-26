@@ -18,6 +18,7 @@ class CreateUserTable extends Migration
             $table->string('name')->index();
             $table->string('username')->index();
             $table->string('password')->index();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

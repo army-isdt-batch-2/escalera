@@ -24,7 +24,8 @@ class CreateLeavesTable extends Migration
             ])->index();
             $table->date('start')->index();
             $table->date('end')->index(); 
-            $table->longText('notes')->index();           
+            $table->longText('notes')->index();        
+            $table->softDeletes();   
             $table->timestamps();
             
             $table->foreign('employee_id')->references('id')->on('employee');
