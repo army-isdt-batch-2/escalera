@@ -49,31 +49,14 @@
                             
                         </thead>
                         <tbody>
-                            <tr>
-                                
-                                
-                                <th scope="row">#</th>
-                                <td>Date</td>
-                                <td>Action</td>
-                              
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                             
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                              
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                               
-                            </tr>
+                                 @foreach($data as $x)
+                                    <tr>
+                                        <th scope="row">{{ $x->id }}</th> 
+                                        <th scope="row">{{ $x->date }}</th>                                                       
+                                        <th scope="row">{{ $x->created_at }}</th> 
+                                        <th scope="row">{{ $x->updated_at }}</th> 
+                                    </tr>
+                                @endforeach
                         </tbody>
                     </table>
 

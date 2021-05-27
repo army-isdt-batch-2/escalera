@@ -18,16 +18,24 @@ class LoansController extends Controller
     }
     public function loans()
     {
-        return view('loans');
+        return view('loans')->with([
+            'data' => Loans::all()
+        ]);
     }
     public function save()
     {
         // save to database
-        $data = $this->request->except('_token');
-        //model
-        Loans::create($data);
+        Loans::create(
+            //query - get all data
+            $this->request->except('_token')
 
+        );
         return Redirect::route('loans');
+    }
+    public function loans_create()
+    {
+       return view('create_form.loans');                
+
     }
     
 }

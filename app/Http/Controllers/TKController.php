@@ -17,15 +17,29 @@ class TKController extends Controller
     }
     public function timekeeping()
     {
-        return view('TK');
+        return view('TK')->with([
+            'data' => Timekeeping::all()
+        ]);
     }
     public function save()
     {
         // save to database
-        $data = $this->request->except('_token');
-        //model
-        Timekeeping::create($data);
+        Timekeeping::create(
+            //query - get all data
+            $this->request->except('_token')
+
+        );
 
         return Redirect::route('timekeeping');
+    }
+    public function TK_create()
+    {
+       return view('create_form.TK');                
+
+    }
+    public function TK_view()
+    {
+       return view('view.TKview');                
+
     }
 }

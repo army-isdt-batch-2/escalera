@@ -17,7 +17,7 @@
                 <br><br>
                 <hr>
                 <div class="col-12">
-                    <form action="/timekeeping/create/save" method="post" class="row g-3">
+                    <form action="{{ URL::route('timekeeping.create.save') }}" method="post" class="row g-3">
                                 @csrf
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Attendance Date</label>

@@ -17,7 +17,7 @@
                 <br><br>
                 <hr>
                 <div class="col-12">
-                    <form action="/employees/create/save" method="post" class="row g-3">
+                    <form action="{{ URL::route('employees.create.save') }}" method="post" class="row g-3">
                                 @csrf
                         <div class="col-md-4">
                             <label for="inputEmail4" class="form-label">Photo</label>
@@ -68,10 +68,10 @@
                         <div class="col-md-4">
                             <label for="inputState" class="form-label">Department</label>
                             <select id="inputState" class="form-select" name="deparment_id" required>
-                                <option selected>Choose...</option>
-                                <option>Depart 1</option>
-                                <option>Depart 2</option>
-                                <option>Depart 3</option>
+                                <option value="0">Choose...</option>
+                                <option value="1">Depart 1</option>
+                                <option value="2">Depart 2</option>
+                                <option value="3">Depart 3</option>
                             </select>
                         </div>
                         <div class="col-md-4">
@@ -85,43 +85,40 @@
                         <div class="col-md-6">
                             <label for="inputState" class="form-label">PhilHealth Contribution Table</label>
                             <select id="inputState" class="form-select" name="philhealth" required>
-                                <option selected>Choose...</option>
-                                <option>1. P 10,000 - Below - (P 275.00 monthly)</option>
-                                <option>2. P 10,000 - Above - (P 575.00 monthly)</option>
-                                <option>1. P Exempted123 - (P 012 monthly)</option>
+                                <option value="0">Choose...</option>
+                                <option value="1">1. P 10,000 - Below - (P 275.00 monthly)</option>
+                                <option value="2">2. P 10,000 - Above - (P 575.00 monthly)</option>
+                                <option value="3">1. P Exempted123 - (P 012 monthly)</option>
                             </select>
                         </div>
                         <div class="col-md-6">
                             <label for="inputState" class="form-label">SSS Contribution Table</label>
                             <select id="inputState" class="form-select" name="sss" required>
-                                <option selected>Choose...</option>
-                                <option>Depart 1</option>
-                                <option>Depart 2</option>
-                                <option>Depart 3</option>
-                                <option>Depart 3</option>
-                                <option>Depart 3</option>
+                                <option value="0">Choose...</option>
+                                <option value="1">Depart 1</option>
+                                <option value="2">Depart 2</option>
+                                <option value="3">Depart 3</option>
+                                
                             </select>
                         </div>
                         <div class="col-md-6">
                             <label for="inputState" class="form-label">PAGIBIG Contribution Table</label>
                             <select id="inputState" class="form-select" name="pagibig" required>
-                                <option selected>Choose...</option>
-                                <option>Depart 1</option>
-                                <option>Depart 2</option>
-                                <option>Depart 3</option>
-                                <option>Depart 3</option>
-                                <option>Depart 3</option>
+                                <option value="0">Choose...</option>
+                                <option value="1">Depart 1</option>
+                                <option value="2">Depart 2</option>
+                                <option value="3">Depart 3</option>
+                              
                             </select>
                         </div>
                         <div class="col-md-6">
                             <label for="inputState" class="form-label">Income Tax Table</label>
                             <select id="inputState" class="form-select" name="tax" required>
-                                <option selected>Choose...</option>
-                                <option>Depart 1</option>
-                                <option>Depart 2</option>
-                                <option>Depart 3</option>
-                                <option>Depart 3</option>
-                                <option>Depart 3</option>
+                                <option value="0">Choose...</option>
+                                <option value="1">Depart 1</option>
+                                <option value="2">Depart 2</option>
+                                <option value="3">Depart 3</option>
+                           
                             </select>
                         </div>
                         <div class="col-12"></div>

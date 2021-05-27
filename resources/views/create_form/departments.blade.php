@@ -17,7 +17,7 @@
                         <br><br>
                         <hr>
                         <div class="col-12">
-                            <form action="/department/create/save" method="post" class="row g-3">
+                            <form action="{{ URL::route('department.create.save') }}" method="post" class="row g-3">
                             @csrf
                                 <div class="col-md-6">
                                     <label for="inputEmail4" class="form-label">Department</label>

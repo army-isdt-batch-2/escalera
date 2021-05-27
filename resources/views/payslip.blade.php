@@ -50,34 +50,15 @@
                             
                         </thead>
                         <tbody>
-                            <tr>
-                        
-                            
-                                <th scope="row">#</th>
-                                <td>Processed</td>
-                                <td>Cut off start</td>
-                                <td>Cut off End</td>
-                                <td>Action</td>
-                                
-
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                                @foreach($data as $x)
+                                    <tr>
+                                        <th scope="row">{{ $x->id }}</th> 
+                                        <th scope="row">{{ $x->cutoff_start }}</th>  
+                                        <th scope="row">{{ $x->cutoff_end }}</th>                                                      
+                                        <th scope="row">{{ $x->created_at }}</th> 
+                                        <th scope="row">{{ $x->updated_at }}</th> 
+                                    </tr>
+                                @endforeach
                         </tbody>
                     </table>
 

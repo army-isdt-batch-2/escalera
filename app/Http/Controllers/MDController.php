@@ -18,16 +18,25 @@ class MDController extends Controller
     }
     public function mandatorydeduction()
     {
-        return view('MD');
+        return view('MD')->with([
+            'data' => Deduction::all()
+        ]);
     }
     public function save()
     {
         // save to database
-        $data = $this->request->except('_token');
-        //model
-        Leaves::create($data);
+        Deduction::create(
+            //query - get all data
+            $this->request->except('_token')
+
+        );
 
         return Deduction::route('mandatorydeduction');
+    }
+    public function MD_create()
+    {
+       return view('create_form.MD');                
+
     }
     
 }

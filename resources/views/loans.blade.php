@@ -49,37 +49,21 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                            
+                                @foreach($data as $x)
+                                    <tr>
+                                        <th scope="row">{{ $x->id }}</th> 
+                                        <th scope="row">{{ $x->employee_id }}</th>  
+                                        <th scope="row">{{ $x->full_name }}</th> 
+                                        <th scope="row">{{ $x->designation }}</th>  
+                                        <th scope="row">{{ $x->loan_type }}</th> 
+                                        <th scope="row">{{ $x->loan_amount }}</th>      
+                                        <th scope="row">{{ $x->months_payable }}</th> 
+                                        <th scope="row">{{ $x->notes }}</th>                                                       
+                                        <th scope="row">{{ $x->created_at }}</th> 
+                                        <th scope="row">{{ $x->updated_at }}</th> 
+                                    </tr>
+                                @endforeach
                                 
-                                    <th scope="row">#</th>
-                                    <td>Employee ID</td>
-                                    <td>Loan Type</td>
-                                    <td>Amount</td>
-                                    <td>Months Payable</td>
-                                    <td>Total</td>
-                                    <td>Balance</td>
-                                    <td>Status</td>
-                                    <td>Action</td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
                             </tbody>
                         </table>
 

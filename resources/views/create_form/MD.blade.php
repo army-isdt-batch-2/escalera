@@ -17,7 +17,7 @@
                 <br><br>
                 <hr>
                 <div class="col-12">
-                    <form action="/mandatorydeduction/create/save" method="post" class="row g-3">
+                    <form action="{{ URL::route('deduction.create.save') }}" method="post" class="row g-3">
                                 @csrf
                         <div class="col-md-4">
                             <label for="inputState" class="form-label">Contribution Type</label>

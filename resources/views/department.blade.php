@@ -36,42 +36,23 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Brand</th>
-                                <th scope="col">Description</th>
+                                <th class="text-muted" scope="col">#</th>
+                                <th class="text-muted" scope="col">Department</th>
+                                <th class="text-muted" scope="col">Created</th>
+                                <th class="text-muted" scope="col">Updated</th>
+                                <th class="text-muted" scope="col">Action</th>
                             </tr>
-                            </thead>
+                        </thead>
                         <tbody>
+                            @foreach($data as $x)
                             <tr>
-                        
-                            
-                                <th scope="row">#</th>
-                                <td>Department</td>
-                                <td>Created</td>
-                                <td>Updated</td>
-                                <td>Action</td>
-
+                                <th scope="row">{{ $x->id }}</th> 
+                                <th scope="row">{{ $x->department }}</th>                    
+                                <th scope="row">{{ $x->created_at }}</th> 
+                                <th scope="row">{{ $x->updated_at }}</th> 
                             </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                               
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                               
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                               
-                            </tr>
+                            @endforeach
+                           
                         </tbody>
                     </table>
 

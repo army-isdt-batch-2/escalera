@@ -18,16 +18,25 @@ class DepartmentController extends Controller
     
     public function department()
     {
-        return view('department');
+        return view('department')->with([
+            'data' => Department::all()
+        ]);
     }
     public function save()
     {
         // save to database
-        $data = $this->request->except('_token');
-        //model
-        Department::create($data);
+        Department::create(
+            //query - get all data
+            $this->request->except('_token')
+
+        );
 
         return Redirect::route('department');
+    }
+    public function department_create()
+    {
+       return view('create_form.departments');                
+
     }
     
 }

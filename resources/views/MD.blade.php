@@ -49,35 +49,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                        
-                            
-                                <th scope="row">#</th>
-                                <td>Base Range</td>
-                                <td>Monthly</td>
-                                <td>Employee</td>
-                                <td>Employer</td>
-                                <td>Created</td>
-                                <td>Updated</td>
-                                <td>Action</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                                @foreach($data as $x)
+                                    <tr>
+                                        <th scope="row">{{ $x->id }}</th> 
+                                        <th scope="row">{{ $x->contribution_type }}</th>  
+                                        <th scope="row">{{ $x->base_range }}</th> 
+                                        <th scope="row">{{ $x->monthly_contribution }}</th>  
+                                        <th scope="row">{{ $x->employee_share }}</th> 
+                                        <th scope="row">{{ $x->employer_share }}</th>                                                       
+                                        <th scope="row">{{ $x->created_at }}</th> 
+                                        <th scope="row">{{ $x->updated_at }}</th> 
+                                    </tr>
+                                @endforeach
                         </tbody>
                     </table>
 

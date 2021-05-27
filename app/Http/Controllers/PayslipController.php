@@ -18,17 +18,31 @@ class PayslipController extends Controller
 
     public function payslip()
     {
-        return view('payslip');
+        return view('payslip')->with([
+            'data' => Payslip::all()
+        ]);
     }
     
     public function save()
     {
         // save to database
-        $data = $this->request->except('_token');
-        //model
-        Payslip::create($data);
+        Payslip::create(
+            //query - get all data
+            $this->request->except('_token')
+
+        );
 
         return Redirect::route('payslip');
+    }
+    public function payslip_create()
+    {
+       return view('create_form.payslip');                
+
+    }
+    public function payslip_view()
+    {
+       return view('view.payslip');                
+
     }
 }
 

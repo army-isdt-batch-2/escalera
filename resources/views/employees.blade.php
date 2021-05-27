@@ -42,36 +42,41 @@
                                 <th scope="col">Contact</th>
                                 <th scope="col">Total Earnings</th>
                                 <th scope="col">Action</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
+                             @foreach($data as $x)
                             <tr>
-                        
+                                <th scope="row">
+                                    <img width="50px" src="https://w7.pngwing.com/pngs/773/503/png-transparent-emoticon-computer-icons-smiley-wink-smiley-miscellaneous-logo-smiley.png" alt="">
+                                    <br>
+                                    <small>Ryan Escalera</small>
+                                </th>
+
+
+
+                                <th scope="row">{{ $x->id }}</th> 
+                                <th scope="row">{{ $x->photo }}</th>  
+                                <th scope="row">{{ $x->first_name }}</th> 
+                                <th scope="row">{{ $x->last_name }}</th>  
+                                <th scope="row">{{ $x->middle_name }}</th> 
+                                <th scope="row">{{ $x->contact_number }}</th>      
+                                <th scope="row">{{ $x->address }}</th> 
+                                <th scope="row">{{ $x->birthday }}</th>    
+                                <th scope="row">{{ $x->gender }}</th> 
+                                <th scope="row">{{ $x->department_id }}</th>  
+                                <th scope="row">{{ $x->designation }}</th> 
+                                <th scope="row">{{ $x->basic_rate_perday }}</th>      
+                                <th scope="row">{{ $x->sss }}</th> 
+                                <th scope="row">{{ $x->philhealth }}</th>
+                                <th scope="row">{{ $x->pagibig }}</th> 
+                                <th scope="row">{{ $x->tax }}</th>                                                    
+                                <th scope="row">{{ $x->created_at }}</th> 
+                                <th scope="row">{{ $x->updated_at }}</th> 
+                            </tr>
+                            @endforeach
                             
-                                <th scope="row">#</th>
-                                <td>Employee ID</td>
-                                <td>Gender</td>
-                                <td>Contact</td>
-                                <td>Total Earnings</td>
-                                <td>Action</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
                         </tbody>
                     </table>
 
